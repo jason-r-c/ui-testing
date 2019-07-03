@@ -1,0 +1,15 @@
+plugins {
+  id 'java'
+  id "com.katalon.gradle-plugin" version "0.0.7"
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  // sample dependencies
+  // rest-assured
+  compile 'us.codecraft:xsoup:0.3.1'
+
+}

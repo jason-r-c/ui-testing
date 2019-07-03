@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create new Franchise Installer</description>
+   <name>localOfficeCreateNewFranchiseInstaller</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>787537b1-1987-47f1-83c0-00092dafcf1d</testCaseGuid>
+</TestCaseEntity>

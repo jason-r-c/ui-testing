@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>SelectSetupDemoScript</name>
+   <tag></tag>
+   <elementGuidId>2e33cd4a-429b-4f08-8e55-0e7d604f3964</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id=&quot;script&quot;]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//select[@name = 'script' and @id = 'script' and (text() = '
+com.pumpco.bettertogether.JamesAllDataScript
+com.pumpco.healthsolutions.SetupBenchmarkScript
+com.pumpco.healthsolutions.SetupCaseScript
+com.pumpco.healthsolutions.SetupConsultationScript
+com.pumpco.healthsolutions.SetupDemoScript
+com.pumpco.healthsolutions.SetupProfessionalScript
+com.pumpco.healthtag.SetupDemoScript
+com.pumpco.healthtag.SetupPilotScript
+com.pumpco.iotaa.AttendanceInScript
+com.pumpco.iotaa.AttendanceOutScript
+com.pumpco.iotaa.BoilKettleScript
+com.pumpco.iotaa.CareGiverArrivalScript
+com.pumpco.iotaa.CareGiverDepartScript
+com.pumpco.iotaa.CareGiverNotArrivedScript
+com.pumpco.iotaa.ClearDownScript
+com.pumpco.iotaa.FallAlarmScript
+com.pumpco.iotaa.FireScript
+com.pumpco.iotaa.FloodScript
+com.pumpco.iotaa.HeartBeatScript
+com.pumpco.iotaa.KettleUseScript
+com.pumpco.iotaa.MealsOnWheelsNotArrivedScript
+com.pumpco.iotaa.MoWArrivalScript
+com.pumpco.iotaa.MoWDepartScript
+com.pumpco.iotaa.MovementThenNoMovementScript
+com.pumpco.iotaa.MovementThenWanderingScript
+com.pumpco.iotaa.NighttimeBathroomScript
+com.pumpco.iotaa.NoKettleForTimeScript
+com.pumpco.iotaa.NoKettleInMorningScript
+com.pumpco.iotaa.NoMovementScript
+com.pumpco.iotaa.RepeatKettleBoilsScript
+com.pumpco.iotaa.SetupDemoScript
+com.pumpco.iotaa.WanderingAtNightScript
+com.pumpco.iotaa.WeeksKettleBoilingScript
+com.pumpco.pumpcore.DefaultStartupScript
+com.pumpco.pumpcore.MongoGraphImportScript
+com.pumpco.pumphouse.RandomConversationsScript
+com.pumpco.pumphouse.RandomJournalBackpackScript
+com.pumpco.pumphouse.RandomUsersScript
+' or . = '
+com.pumpco.bettertogether.JamesAllDataScript
+com.pumpco.healthsolutions.SetupBenchmarkScript
+com.pumpco.healthsolutions.SetupCaseScript
+com.pumpco.healthsolutions.SetupConsultationScript
+com.pumpco.healthsolutions.SetupDemoScript
+com.pumpco.healthsolutions.SetupProfessionalScript
+com.pumpco.healthtag.SetupDemoScript
+com.pumpco.healthtag.SetupPilotScript
+com.pumpco.iotaa.AttendanceInScript
+com.pumpco.iotaa.AttendanceOutScript
+com.pumpco.iotaa.BoilKettleScript
+com.pumpco.iotaa.CareGiverArrivalScript
+com.pumpco.iotaa.CareGiverDepartScript
+com.pumpco.iotaa.CareGiverNotArrivedScript
+com.pumpco.iotaa.ClearDownScript
+com.pumpco.iotaa.FallAlarmScript
+com.pumpco.iotaa.FireScript
+com.pumpco.iotaa.FloodScript
+com.pumpco.iotaa.HeartBeatScript
+com.pumpco.iotaa.KettleUseScript
+com.pumpco.iotaa.MealsOnWheelsNotArrivedScript
+com.pumpco.iotaa.MoWArrivalScript
+com.pumpco.iotaa.MoWDepartScript
+com.pumpco.iotaa.MovementThenNoMovementScript
+com.pumpco.iotaa.MovementThenWanderingScript
+com.pumpco.iotaa.NighttimeBathroomScript
+com.pumpco.iotaa.NoKettleForTimeScript
+com.pumpco.iotaa.NoKettleInMorningScript
+com.pumpco.iotaa.NoMovementScript
+com.pumpco.iotaa.RepeatKettleBoilsScript
+com.pumpco.iotaa.SetupDemoScript
+com.pumpco.iotaa.WanderingAtNightScript
+com.pumpco.iotaa.WeeksKettleBoilingScript
+com.pumpco.pumpcore.DefaultStartupScript
+com.pumpco.pumpcore.MongoGraphImportScript
+com.pumpco.pumphouse.RandomConversationsScript
+com.pumpco.pumphouse.RandomJournalBackpackScript
+com.pumpco.pumphouse.RandomUsersScript
+')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>script</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>script</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+com.pumpco.bettertogether.JamesAllDataScript
+com.pumpco.healthsolutions.SetupBenchmarkScript
+com.pumpco.healthsolutions.SetupCaseScript
+com.pumpco.healthsolutions.SetupConsultationScript
+com.pumpco.healthsolutions.SetupDemoScript
+com.pumpco.healthsolutions.SetupProfessionalScript
+com.pumpco.healthtag.SetupDemoScript
+com.pumpco.healthtag.SetupPilotScript
+com.pumpco.iotaa.AttendanceInScript
+com.pumpco.iotaa.AttendanceOutScript
+com.pumpco.iotaa.BoilKettleScript
+com.pumpco.iotaa.CareGiverArrivalScript
+com.pumpco.iotaa.CareGiverDepartScript
+com.pumpco.iotaa.CareGiverNotArrivedScript
+com.pumpco.iotaa.ClearDownScript
+com.pumpco.iotaa.FallAlarmScript
+com.pumpco.iotaa.FireScript
+com.pumpco.iotaa.FloodScript
+com.pumpco.iotaa.HeartBeatScript
+com.pumpco.iotaa.KettleUseScript
+com.pumpco.iotaa.MealsOnWheelsNotArrivedScript
+com.pumpco.iotaa.MoWArrivalScript
+com.pumpco.iotaa.MoWDepartScript
+com.pumpco.iotaa.MovementThenNoMovementScript
+com.pumpco.iotaa.MovementThenWanderingScript
+com.pumpco.iotaa.NighttimeBathroomScript
+com.pumpco.iotaa.NoKettleForTimeScript
+com.pumpco.iotaa.NoKettleInMorningScript
+com.pumpco.iotaa.NoMovementScript
+com.pumpco.iotaa.RepeatKettleBoilsScript
+com.pumpco.iotaa.SetupDemoScript
+com.pumpco.iotaa.WanderingAtNightScript
+com.pumpco.iotaa.WeeksKettleBoilingScript
+com.pumpco.pumpcore.DefaultStartupScript
+com.pumpco.pumpcore.MongoGraphImportScript
+com.pumpco.pumphouse.RandomConversationsScript
+com.pumpco.pumphouse.RandomJournalBackpackScript
+com.pumpco.pumphouse.RandomUsersScript
+</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/div[1]/form[@id=&quot;script&quot;]/table[1]/tbody[1]/tr[1]/td[1]/select[@id=&quot;script&quot;]</value>
+   </webElementProperties>
+</WebElementEntity>

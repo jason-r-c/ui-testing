@@ -1,0 +1,10 @@
+	 * @anthropos-gherkin: Step: go to PumpAdmin fixtures list. Description: Navigates to PumpAdmin fixture list.
+
+	 * @anthropos-gherkin: Step: select(.*)fixture. Description: Select a fixture to save, more than likely this will be Iotaa. '(.*)' represents any value from the drop down list.
+
+	 * @anthropos-gherkin: Step: drop the database. Description: Resets the database to its default state.
+
+	 * @anthropos-gherkin: Step: confirm the password. Description: Adds the password for refixturing.
+
+	 * @anthropos-gherkin: Step: click submit to refixture. Description: Runs the refixture in PumpHouse
+

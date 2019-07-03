@@ -1,0 +1,15 @@
+{
+  "name": "dictionary-doc",
+  "version": "1.0.0",
+  "description": "Gets the comments marked with @anthropos-gherkin and adds them to a text file called dictionary.txt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "log-timestamp": "^0.3.0"
+  }
+}

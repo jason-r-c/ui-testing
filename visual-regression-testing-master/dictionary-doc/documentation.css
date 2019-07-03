@@ -1,0 +1,42 @@
+#logo-container {
+    text-align: center;
+}
+
+#logo-container img {
+    width: 50%;
+    padding: 10px;
+}
+
+.gherkin-name {
+    background: black;
+    color: white;
+    font-family: monospace;
+}
+
+.gherkin-step {
+    background: #f1f1f1;
+    padding: 10px;
+    /* margin: 10px 0; */
+}
+
+.gherkin-name,
+.gherkin-desc {
+    padding: 10px;
+}
+
+.gherkin-step-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+img {
+    width: 100%;
+}
+
+/* Move step grid to single column for mobile devices */
+@media(max-width: 768px) {
+    .gherkin-step-grid {
+        grid-template-columns: 1fr;
+    }
+}

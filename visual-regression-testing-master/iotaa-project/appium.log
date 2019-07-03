@@ -1,0 +1,107 @@
+[Appium] Welcome to Appium v1.7.2
+[Appium] Non-default server args:
+[Appium]   port: 61764
+[Appium]   loglevel: info
+[Appium]   chromeDriverPort: 61765
+[Appium]   tmpDir: /var/folders/vx/2xp2q0v93bs63209m75yw2cw0000gn/T//Katalon/Appium/Temp1523974436476
+[Appium] Appium REST http interface listener started on 0.0.0.0:61764
+[HTTP] --> GET /wd/hub/status {}
+[HTTP] <-- GET /wd/hub/status 200 14 ms - 72 
+[HTTP] --> GET /wd/hub/status {}
+[HTTP] <-- GET /wd/hub/status 200 14 ms - 72 
+[HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"/Users/jasoncarney/Downloads/helloworld.ipa","automationName":"XCUITest","deviceName":"iPhone 6 Plus","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platformName":"iOS","realDeviceLogger":"/Applications/Katalon Studio.app/Contents/Eclipse/configuration/resources/tools/deviceconsole/deviceconsole","udid":"0E426236-C175-4079-84B7-5E47F09C4E1A","waitForAppScript":"true;","wdaLocalPort":61825},"capabilities":{"desiredCapabilities":{"app":"/Users/jasoncarney/Downloads/helloworld.ipa","automationName":"XCUITest","deviceName":"iPhone 6 Plus","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platformName":"iOS","realDeviceLogger":"/Applications/Katalon Studio.app/Contents/Eclipse/configuration/resources/tools/deviceconsole/deviceconsole","udid":"0E426236-C175-4079-84B7-5E47F09C4E1A","waitForAppScript":"true;","wdaLocalPort":61825},"firstMatch":[{"platformName":"ios"}]}}
+[Appium] Merged W3C capabilities {"desiredCapabilities":{"app":"/Users/jasoncarn... into desiredCapabilities object {"app":"/Users/jasoncarney/Downloads/helloworld...
+[Appium] Creating new XCUITestDriver (v2.64.0) session
+[Appium] Capabilities:
+[Appium]   app: /Users/jasoncarney/Downloads/helloworld.ipa
+[Appium]   automationName: XCUITest
+[Appium]   deviceName: iPhone 6 Plus
+[Appium]   fullReset: false
+[Appium]   newCommandTimeout: 1800
+[Appium]   noReset: true
+[Appium]   platformName: ios
+[Appium]   realDeviceLogger: /Applications/Katalon Studio.app/Contents/Eclipse/configuration/resources/tools/deviceconsole/deviceconsole
+[Appium]   udid: 0E426236-C175-4079-84B7-5E47F09C4E1A
+[Appium]   waitForAppScript: true;
+[Appium]   wdaLocalPort: 61825
+[BaseDriver] Session created with session id: bb787d99-df59-4b83-aa21-b6fc4ea45821
+[iOSSim] Constructing iOS simulator for Xcode version 9.2 with udid '0E426236-C175-4079-84B7-5E47F09C4E1A'
+[XCUITest] Determining device to run tests on: udid: '0E426236-C175-4079-84B7-5E47F09C4E1A', real device: false
+[XCUITest] No platformVersion specified. Using device version: '10.3'
+[BaseDriver] Using local app '/Users/jasoncarney/Downloads/helloworld.ipa'
+[BaseDriver] Unzipping local app '/var/folders/vx/2xp2q0v93bs63209m75yw2cw0000gn/T/2018317-89689-k55fgv.htvso/appium-app.zip'...
+[BaseDriver] Unzipped local app to '/var/folders/vx/2xp2q0v93bs63209m75yw2cw0000gn/T/2018317-89689-k55fgv.htvso/Payload/helloworld.app'
+[XCUITest] Continuing without capturing logs: iOS Simulator with udid 0E426236-C175-4079-84B7-5E47F09C4E1A is not running
+[XCUITest] Setting up simulator
+[iOSSim] Booting Simulator with UDID 0E426236-C175-4079-84B7-5E47F09C4E1A...
+[iOSSim] Starting Simulator UI with command: open -Fn /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app --args -CurrentDeviceUDID 0E426236-C175-4079-84B7-5E47F09C4E1A -ConnectHardwareKeyboard 0
+[iOSSim] Simulator with UDID 0E426236-C175-4079-84B7-5E47F09C4E1A booted in 20 seconds
+[XCUITest] Using WDA path: '/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent'
+[XCUITest] Using WDA agent: '/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent/WebDriverAgent.xcodeproj'
+[XCUITest] Launching WebDriverAgent on the device
+[HTTP] <-- POST /wd/hub/session - - ms - - 
+[HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"/Users/jasoncarney/Downloads/helloworld.ipa","automationName":"XCUITest","deviceName":"iPhone 6 Plus","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platformName":"iOS","realDeviceLogger":"/Applications/Katalon Studio.app/Contents/Eclipse/configuration/resources/tools/deviceconsole/deviceconsole","udid":"0E426236-C175-4079-84B7-5E47F09C4E1A","waitForAppScript":"true;","wdaLocalPort":61825},"capabilities":{"desiredCapabilities":{"app":"/Users/jasoncarney/Downloads/helloworld.ipa","automationName":"XCUITest","deviceName":"iPhone 6 Plus","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platformName":"iOS","realDeviceLogger":"/Applications/Katalon Studio.app/Contents/Eclipse/configuration/resources/tools/deviceconsole/deviceconsole","udid":"0E426236-C175-4079-84B7-5E47F09C4E1A","waitForAppScript":"true;","wdaLocalPort":61825},"firstMatch":[{"platformName":"ios"}]}}
+[Appium] Merged W3C capabilities {"desiredCapabilities":{"app":"/Users/jasoncarn... into desiredCapabilities object {"app":"/Users/jasoncarney/Downloads/helloworld...
+[Appium] Creating new XCUITestDriver (v2.64.0) session
+[Appium] Capabilities:
+[Appium]   app: /Users/jasoncarney/Downloads/helloworld.ipa
+[Appium]   automationName: XCUITest
+[Appium]   deviceName: iPhone 6 Plus
+[Appium]   fullReset: false
+[Appium]   newCommandTimeout: 1800
+[Appium]   noReset: true
+[Appium]   platformName: ios
+[Appium]   realDeviceLogger: /Applications/Katalon Studio.app/Contents/Eclipse/configuration/resources/tools/deviceconsole/deviceconsole
+[Appium]   udid: 0E426236-C175-4079-84B7-5E47F09C4E1A
+[Appium]   waitForAppScript: true;
+[Appium]   wdaLocalPort: 61825
+[BaseDriver] Session created with session id: 24d7107b-45e4-4d56-9708-2828beb82447
+[iOSSim] Constructing iOS simulator for Xcode version 9.2 with udid '0E426236-C175-4079-84B7-5E47F09C4E1A'
+[XCUITest] Determining device to run tests on: udid: '0E426236-C175-4079-84B7-5E47F09C4E1A', real device: false
+[XCUITest] No platformVersion specified. Using device version: '10.3'
+[BaseDriver] Using local app '/Users/jasoncarney/Downloads/helloworld.ipa'
+[BaseDriver] Unzipping local app '/var/folders/vx/2xp2q0v93bs63209m75yw2cw0000gn/T/2018317-89689-9948b8.kfjk/appium-app.zip'...
+[BaseDriver] Unzipped local app to '/var/folders/vx/2xp2q0v93bs63209m75yw2cw0000gn/T/2018317-89689-9948b8.kfjk/Payload/helloworld.app'
+[XCUITest] Setting up simulator
+[iOSSim] Both Simulator with UDID 0E426236-C175-4079-84B7-5E47F09C4E1A and the UI client are currently running
+[XCUITest] Shutting down sub-processes
+[XCUITest] Shutting down xcodebuild process (pid 89921)
+[XCUITest] xcodebuild exited with code 'null' and signal 'SIGTERM'
+[XCUITest] WebDriverAgent uninstall failed. Perhaps, it is already uninstalled? Original error: {}
+[XCUITest] Launching WebDriverAgent on the device
+[XCUITest] Shutting down sub-processes
+[XCUITest] Shutting down xcodebuild process (pid 91027)
+[Xcode] 2018-04-17 15:34:07.516 xcodebuild[91027:2919514] [MT] IDETestOperationsObserverDebug: (61A96345-90B0-449E-9CC8-1BD27A948322) Failed to make test runner session:
+[Xcode] Error Domain=DTXProxyChannel Code=1 "(null)" UserInfo={DTXProxyChannelErrorMessage=Channel disconnected}
+[Xcode] 
+[Xcode] 2018-04-17 15:34:07.763 xcodebuild[91027:2919514] Error Domain=NSMachErrorDomain Code=-308 "(ipc/mig) server died"
+[Xcode] 
+[Xcode] 2018-04-17 15:34:07.763 xcodebuild[91027:2919514] Error Domain=IDETestOperationsObserverErrorDomain Code=6 "Early unexpected exit, operation never finished bootstrapping - no restart will be attempted" UserInfo={NSLocalizedDescription=Early unexpected exit, operation never finished bootstrapping - no restart will be attempted}
+[Xcode] 
+[Xcode] ** TEST EXECUTE FAILED **
+[Xcode] 
+[Xcode] 
+[XCUITest] xcodebuild exited with code 'null' and signal 'SIGKILL'
+[XCUITest] WebDriverAgent uninstall failed. Perhaps, it is already uninstalled? Original error: {}
+[XCUITest] Using WDA path: '/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent'
+[XCUITest] Using WDA agent: '/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent/WebDriverAgent.xcodeproj'
+[XCUITest] Launching WebDriverAgent on the device
+[HTTP] <-- POST /wd/hub/session - - ms - - 
+[Xcode] 2018-04-17 15:34:20.227 xcodebuild[91380:2930330] [MT] IDETestOperationsObserverDebug: (DA9F8208-B365-4164-9278-8D20D17E2A25) Failed to make test runner session:
+[Xcode] Error Domain=DTXProxyChannel Code=1 "(null)" UserInfo={DTXProxyChannelErrorMessage=Channel disconnected}
+[Xcode] 
+[Xcode] 2018-04-17 15:34:20.475 xcodebuild[91380:2930330] Error Domain=com.apple.CoreSimulator.SimError Code=164 "Invalid device state" UserInfo={SimCallingSelector=installApplication:withOptions:error:, NSLocalizedDescription=Invalid device state, NSUnderlyingError=0x7fa345560880 {Error Domain=NSMachErrorDomain Code=-308 "(ipc/mig) server died"}}
+[Xcode] 
+[Xcode] 2018-04-17 15:34:20.475 xcodebuild[91380:2930330] Error Domain=IDETestOperationsObserverErrorDomain Code=6 "Early unexpected exit, operation never finished bootstrapping - no restart will be attempted" UserInfo={NSLocalizedDescription=Early unexpected exit, operation never finished bootstrapping - no restart will be attempted}
+[Xcode] 
+[Xcode] ** TEST EXECUTE FAILED **
+[Xcode] 
+[Xcode] 
+[XCUITest] xcodebuild exited with code '65' and signal 'null'
+[XCUITest] Shutting down sub-processes
+[XCUITest] WebDriverAgent uninstall failed. Perhaps, it is already uninstalled? Original error: {}
+[XCUITest] Launching WebDriverAgent on the device
+[XCUITest] Shutting down sub-processes
+[XCUITest] Shutting down xcodebuild process (pid 91474)
+[XCUITest] xcodebuild exited with code 'null' and signal 'SIGKILL'
+[XCUITest] WebDriverAgent uninstall failed. Perhaps, it is already uninstalled? Original error: {}

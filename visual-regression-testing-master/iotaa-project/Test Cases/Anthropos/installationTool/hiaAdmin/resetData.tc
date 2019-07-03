@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Refixtures so to remove previous data</description>
+   <name>resetData</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ae7f115f-ef4c-415f-9c83-a1b6eedb69e7</testCaseGuid>
+</TestCaseEntity>

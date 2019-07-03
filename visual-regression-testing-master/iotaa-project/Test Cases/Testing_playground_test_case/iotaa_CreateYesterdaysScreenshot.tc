@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>When using the project for the 1st time, run this script to create a screenshot. 
+
+This is needed so that a screenshot can be read-in by the ScreenshotHelper groovy class. If no screenshot exists the test will error due to a &quot;cannot read image&quot; issue</description>
+   <name>iotaa_CreateYesterdaysScreenshot</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>7069106e-5c87-42d3-bb42-55fb4104c2f7</testCaseGuid>
+</TestCaseEntity>

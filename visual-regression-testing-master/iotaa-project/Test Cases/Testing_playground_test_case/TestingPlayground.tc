@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Use this test case for things that are:
+- Considered disposable
+- Not consideted part of the iotaa</description>
+   <name>TestingPlayground</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>27439596-56f3-42c1-9bdf-52ec6379fa72</testCaseGuid>
+</TestCaseEntity>

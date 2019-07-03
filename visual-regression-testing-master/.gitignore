@@ -1,0 +1,24 @@
+# // Catch all
+# iotaa-project/Test Suites/*.ts
+# iotaa-project/bin/*
+iotaa-project/Reports/*
+iotaa-project/bin/*
+iotaa-project/Libs*
+
+# // Node modules
+dictionary-doc/document-gen-watcher/node_modules/
+
+# // ignore the analytics files (file is changed often during development)
+iotaa-project/settings/internal/com.kms.katalon.integration.analytics.properties
+
+# // ignore the date timestamp file (file is changed often during development)
+iotaa-project/settings/internal/com.kms.katalon.composer.testcase.properties
+
+# // JC 3/5/19: attempt to fix issues using new packages / keywords on windows 10 katalon server
+# iotaa-project/.classpath
+
+# // old
+# iotaa-project/.classpath
+# iotaa-project/.project
+# iotaa-project/bin/keyword/.gitignore
+# iotaa-project/bin/lib/.gitignore

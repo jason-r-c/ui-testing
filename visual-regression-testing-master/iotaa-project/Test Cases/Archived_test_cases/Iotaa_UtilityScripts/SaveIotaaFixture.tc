@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Use this script to save the iotaa fixture, clear the database and run the SetupDemoScript</description>
+   <name>SaveIotaaFixture</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d72e3683-e0f8-4401-948d-6c7ef8005e28</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>default</name>
+   <tag></tag>
+   <defaultProfile>true</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>10</initValue>
+      <name>G_Timeout</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>5</initValue>
+      <name>G_ShortTimeOut</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Time to wait between executing commands</description>
+      <initValue>3</initValue>
+      <name>timeToWait</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'dev.cnect.to'</initValue>
+      <name>G_SiteURL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'/iotaa'</initValue>
+      <name>G_iotaaPathPostfix</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'onetwothree'</initValue>
+      <name>G_dashboard_password</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

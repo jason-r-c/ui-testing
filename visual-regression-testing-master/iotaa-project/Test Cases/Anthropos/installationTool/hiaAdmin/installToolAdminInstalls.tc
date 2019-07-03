@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Installation for Admins</description>
+   <name>installToolAdminInstalls</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>67ef1953-32ab-4399-8f5c-81fbd7810831</testCaseGuid>
+</TestCaseEntity>

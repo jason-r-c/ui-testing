@@ -1,0 +1,9 @@
+[
+  {
+    "Description": "Windows 10",
+    "Format": "ova",
+    "UserBucket": {
+        "S3Bucket": "windows-ten-vm",
+        "S3Key": "WindowsUITestingTwo.ova"
+    }
+}]

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Runs pumpAdmin script to create an order</description>
+   <name>generateOrder</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>7d971373-f37c-4bd8-b159-fc50958fc662</testCaseGuid>
+</TestCaseEntity>
