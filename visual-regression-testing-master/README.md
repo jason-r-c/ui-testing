@@ -100,7 +100,7 @@ The gherkin writer should be able to refer to the Dictionary for copying and pas
 An example glue code function:
 
 ```
-/** @anthropos-gherkin:
+/** @gherkin:
  * Step: I enter (.*) in the (.*) field in the (.*) appflow. Description: Use this step for entering values into input fields. <br><br><strong>Example usage:</strong><br>I enter Ferrari in the Surname field.
  */
 @Given('I enter (.*) in the (.*) field')
