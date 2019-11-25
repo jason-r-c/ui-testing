@@ -1,8 +1,7 @@
 ## Summary
 
 
-
-Currently (28/1/19), there are Windows 10 AMI backups stored at https://eu-west-1.console.aws.amazon.com/ec2/v2/home?region=eu-west-1#Images:visibility=owned-by-me;search=windows;sort=name
+There are Windows 10 AMI backups stored on AWS.
 
 These AMI backups contain fully imported Windows 10 VMs that are configured with the appropriate testing environment (Katalon Studio, necessary directory config, web browsers installed and Windows license activated).
 
@@ -150,7 +149,7 @@ When all tests have passed you should see something like the below screenshot
 
 - To export the VM from within Virtual Box see https://www.maketecheasier.com/import-export-ova-files-in-virtualbox/ 
 
-- Create an Amazon S3 Bucket if needed. This is needed so that you can upload the exported VM. To create a Bucket, go to https://console.aws.amazon.com/s3/home?region=eu-west-2 and follow the onscreen instuctions.
+- Create an Amazon S3 Bucket if needed. This is needed so that you can upload the exported VM. Create a Bucket and follow the onscreen instuctions.
 
 - From the terminal, navigate to the `aws-windows-vm` directory. You should see the following files and folder:
 
@@ -177,9 +176,8 @@ aws iam put-role-policy --role-name vmimport --policy-name vmimport --policy-doc
 
 ## Upload the VM
 
-At time of writing (22/02/19) there is a Windows 10 VM image stored in an Amazon S3 Bucket called 'windows-ten-vm' at https://s3.console.aws.amazon.com/s3/buckets/windows-ten-vm/?region=eu-west-2&tab=overview - this is the VM that should be used. 
-
-There is another Bucket called 'jasonc-test-windows-bucket' at https://s3.console.aws.amazon.com/s3/buckets/jasonc-test-windows-bucket/?region=eu-west-2&tab=overview which i suspect can be deleted.
+NOTE:
+There is a Windows 10 VM image stored in an Amazon S3 Bucket called 'windows-ten-vm' - this is the VM that should be used for spinning up new instances. 
 
 NOTE:
 If you plan to create a new VM image and upload it to S3, you should copy it into your local `aws-windows-vm` Git directory (this is simily a measure to prevent path'ing issues, i have used relative paths which worked. If preferred, try using a different path and seeing the results).
@@ -228,7 +226,7 @@ You should see output which looks like the below:
                     "Format": "VMDK",
                     "Status": "active",
                     "UserBucket": {
-                        "S3Bucket": "jasonc-test-windows-bucket",
+                        "S3Bucket": "test-windows-bucket",
                         "S3Key": "WindowsUITestingTwo.ova"
                     }
                 }
@@ -268,7 +266,7 @@ Keep monitoring the import until you see the following which indicaes the imort 
                     "SnapshotId": "snap-080449a33405a26e1",
                     "Status": "completed",
                     "UserBucket": {
-                        "S3Bucket": "jasonc-test-windows-bucket",
+                        "S3Bucket": "test-windows-bucket",
                         "S3Key": "WindowsUITestingTwo.ova"
                     }
                 }
@@ -296,7 +294,7 @@ Note: you wont need to carry out the steps above "Import the VM".
 
 ) Select the region from the top bar. I selecyed London as made sene geographically.
 
-) Select th AMI which waas just createdc by the import process. uing the `describe-import-image-tasks` coomand outupt yu shoudk copy the `ImageId` or `ImportTaskId` value and search that value in the AMIs. Alternativy sort by 'Creation date' to locate the latest.
+) Select th AMI which waas just created by the import process. uing the `describe-import-image-tasks` command outupt you should copy the `ImageId` or `ImportTaskId` value and search that value in the AMIs. Alternativy sort by 'Creation date' to locate the latest.
 
 ) Click the Launch button. 
 
@@ -453,7 +451,7 @@ If you have a key but it wont activate carry out the following:
 
 ## Windows 10 EC2 backup strategy
 
-Currently (21/05/19), the backup strategy is to manually create an AMI image once a month. This should allow us to revert back to a recent version if needed. 
+The backup strategy is to manually create an AMI image once a month. This should allow us to revert back to a recent version if needed. When time is available, this should be handled by jenkins in some form, so to create scheduled backups. 
 
 A useful article on the differences between EBS Snapshots and AMI images (AMI images are the preferred method of backing up) can be found here: https://help.skeddly.com/amazon-web-services/the-difference-between-ebs-snapshots-and-ami-images
 
@@ -486,4 +484,4 @@ A) Add your instance to the Ireland region (this is where Gitlab resides). This 
 
 Q) You want to clone the katalon testing Git repository
 
-A) use HTTPS for cloning with 'git clone http://gitlab.aws.anthropos.io/jcarney/katalon-testing.git' (dont use ssh for cloning)
+A) use HTTPS for cloning (dont use ssh for cloning)
