@@ -1,30 +1,21 @@
 ## Summary
 
-This project focuses on functional UI and visual regression testing of the Dashboards and Family App. Below is a brief explanation of the repository contents.
+This project focuses on functional UI and visual regression testing of the Dashboards and App. Below is a brief explanation of the repository contents.
 
 ## How to run the tests
 
-The [UI Functional Testing Jenkins View](http://jenkins.aws.anthropos.io/jenkins/view/UI%20functional%20testing/) has environments with test suites within. The test suites contains test cases that are ran against the Dashboard / Family App.
+The UI Functional Testing Jenkins View has environments with test suites within. The test suites contains test cases that are ran against the Dashboard / App.
 
-The 3 environments currently targeted:
-- Integration: https://at.aws.anthropos.io
-- Live: https://homeinstead.cnect.to/iotaa
-- UAT: https://iotaa-test.anthropos.io
+The environments targeted:
+- Nightly
+- Integration
+- Regression
 
-The jenkins jobs ssh into the Katalon server (Windows 10 AWS Instance - see http://gitlab.aws.anthropos.io/jcarney/aws-windows-vm for more information). Then a batch script is ran and carries out the following:
-- Removes any previous report that has been ran for that environment
+The jenkins jobs ssh into the Katalon server (Windows 10 AWS Instance). Then a batch script is ran and carries out the following:
+- Removes the previous project every night
 - A Katalon test suite is executed which then runs the containing test cases 
-- The XML test result is saved to the Workspace for that job
-
-The current line of thinking is that Jenkins will run the UI Functional Testing jobs once a night.
-
-## UI Functional testing architecture
-
-The project roughly adheres to the diagram below
-
-![Diagram of UI testing architecture](ui-functional-testing-framework.jpg)
-
------
+- The JUnit test result is saved to the Workspace for that job
+- The JUnit report is copied back into jenkins for display
 
 ## Project structure
 Below details the contents of the git repository
@@ -53,8 +44,6 @@ Note: The test case Jenkins console output is the same info printed to the Katal
 
 This contains `groundtruth.png` and `current.png`. 'groundtruth' is the definitive screenshot of the dashboards, and is used to compare the 'current' screenshot against.
 
-Note: should still work but not currently maintained (18/2/19)
-
 **Scripts folder**
 
 The Scripts folder contains test cases. Currently the test cases are very basic, ie, logging into the Dashboard and Family App. In future, more complex test cases would be created, targeting things that Anthrpos is interested in testing.
@@ -75,130 +64,6 @@ References the Groovy scripts in the Scripts folder.
 
 Contains the Groovy test suite files. The test suite files are used in the shell and batch files.
 
------
-
-## Passing and failing tests
-
-At time of writing (29/03/18) the fail margin is very tight. In other words, a slight difference between screenshots will fail the assertion and deem the images as different.
-
-This may be possible to amend (see https://github.com/yandex-qatools/ashot/tree/master/src/main/java/ru/yandex/qatools/ashot/comparison) but with no easily readable usage instructions or similar, this seems a long shot.
-
-### Test failures - recognising what has failed
-Some issues and errors encountered during development.
-
-#### InvokerInvocationException: Assertion failed
-
-`[ERROR]  - Test Cases/Iotaa_AllinOne/Iotaa_AllinOne FAILED because (of) org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed:`
-
-This is a 'non login'. This error indicates that the AUT was unable to login to the dashboard, therefore, was unable to 'see' the Alerts card in the dashboard.
-
-```
-05-21-2018 11:18:40 AM - [WARNING] - Web element with id: 'Object Repository/IoTAA_Common_Items/AlertsCardNoRedCss' located by 'By.xpath: //div[@class="main-body"]/div[1]' not found
-05-21-2018 11:18:40 AM - [FAILED] - Assertion failed:
-
-assert WebUI.waitForElementVisible(findTestObject(findElement), 16, FailureHandling.STOP_ON_FAILURE)
-             |                     |              |                                 |
-             false                 |              |                                 STOP_ON_FAILURE
-                                   |              IoTAA_Common_Items/AlertsCardNoRedCss
-                                   TestObject - 'Object Repository/IoTAA_Common_Items/AlertsCardNoRedCss'
-
-05-21-2018 11:18:40 AM - [END]    - End action : iotaaDashboardUtils.Utilities.loginIotaaDashboard
-05-21-2018 11:18:40 AM - [ERROR]  - Test Cases/Iotaa_AllinOne/Iotaa_AllinOne FAILED because (of) org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed:
-
-assert WebUI.waitForElementVisible(findTestObject(findElement), 16, FailureHandling.STOP_ON_FAILURE)
-             |                     |              |                                 |
-             false                 |              |                                 STOP_ON_FAILURE
-                                   |              IoTAA_Common_Items/AlertsCardNoRedCss
-                                   TestObject - 'Object Repository/IoTAA_Common_Items/AlertsCardNoRedCss'
-```
-
-Currently ( 21/05/2018 ), the test case will to try to login 3 times, then stop running and throw an assertion error. The test suite will run 3 times in all, giving us 9 total login attempts.
-
----
-
-#### AssertionError: expected [false] but found [true]
-
-`05-29-2018 11:50:30 AM - [FAILED] - Test Cases/Iotaa_dashboard_test_case/Iotaa_dashboard_test_case FAILED because (of) java.lang.AssertionError: expected [false] but found [true]`
-
-This is usually an indicator that the UI has changed, ie, a change has been made to the dashboard UI. Currently, at time of writing ( 29/05/18 ), when a UI change has been checked-in, the first test will fail, then succeed on the second test.
-
-This is because of the 'previous' screenshot getting replaced with the 'current' screenshot, basically the screenshots are the same which is why it passes.
-
-If the tests fail on the second attempt, its probably due to something else.
-
-`diff.hasDiff() is true
-05-29-2018 11:50:30 AM - [PASSED] - com.at.util.ScreenshotHelper.compareImages is PASSED
-05-29-2018 11:50:30 AM - [END]    - End action : Statement - org.testng.Assert.assertFalse(CustomKeywords.com.at.util.ScreenshotHelper.compareImages())
-05-29-2018 11:50:30 AM - [FAILED] - Test Cases/Iotaa_dashboard_test_case/Iotaa_dashboard_test_case FAILED because (of) java.lang.AssertionError: expected [false] but found [true]
-05-29-2018 11:50:30 AM - [END]    - End Test Case : Test Cases/Iotaa_dashboard_test_case/Iotaa_dashboard_test_case
-05-29-2018 11:50:32 AM - [END]    - End Test Suite : Test Suites/Iotaa_dashboard_test_suite/Iotaa_dashboard_test_suite`
-
-#### Unable to click on object 'Object Repository/IoTAA_PumpAdmin/a_Save Fixture'
-
-This error indicates that PumpHouse is currently down on the test server. This is mostly likely due to PumpHouse being rebuilt.  This isnt really anything to worry about, the tests should re-run later when PumpHouse shold be back up and runnning.
-
-```
-[FAILED] - Unable to click on object 'Object Repository/IoTAA_PumpAdmin/a_Save Fixture' (Root cause: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: 'Object Repository/IoTAA_PumpAdmin/a_Save Fixture' located by 'By.xpath: //a[@href = '/PumpHouse/pumpAdmin/refixture' and (text() = 'Save Fixture' or . = 'Save Fixture')]' not found)
-```
-
-### Dont switch screens during tests
-Update 8/4/19:
-If appears that using `WebUI.verifyElementVisible()` and switching between applications on your local dev machine will cause tests to error. It seems that Katalon needs the renderer to paint to the screen to that it can actually determine if the element is visible. However, the issue does not appear for tests are run in headless mode which should be the intended mode when being run on the AWS Windows 10 server. It is recommended not to switch between screens on the local machine you are running tests on.
-
-At the point of screen capture if you switch to another window / open program this gives different results. The thing to do is to leave the test to run isolated with no interaction until the test has fully ran.
-
-Update 22/05/18:
-When running tests on a Mac laptop with an additional screen attached ( ie, displays partially on the mac screen with some part of it hidden ) and maximising the browser window by clicking the green window button, causes the browser window to maximise at different resolutions.
-
-The following screen sizes have been recorded
-
-2880 × 1416: this size causes errors
-
-2880 × 1420: this seems to be the error free 'correct' screen size
-
-### Running like-for-like
-
-It seems that running a test in IDE mode and comparing it to a screenshot take using Console mode gives 2 different results (image resolution varies). You should run tests like-for-like so run all in the IDE OR run all via the Console.
-
-## Cross browser desktop testing
-
-09/05/18: As Firefox was causing lots of headaches some investigation was made into ensuring all desktop browsers are supported.
-
-### Chrome
-This dosnt need anything special to run inside of
-
-### Firefox
-- Specifically need to use the Firefox [Katalon Recorder (Selenium IDE for FF55+)](https://addons.mozilla.org/en-US/firefox/addon/katalon-automation-record/) plugin as some parts of the Katalon WebUI API don’t work with Firefox
-- Currently Utilities.groovy has been updated to check if the AUT is running within Firefox and will use the native Selenium commands as opposed to the Katalon WebUI commands
-
-### Edge
-- Is currently not supported. Katalon currently does not support MicrosoftWebDriver.exe version 17763
-
-### Safari
-- To get Safari to recognise the Katalon tests you need to change the below setting
- - Go to: Develop > Allow Remote Automation
- - Note: I have noticed the path to some JAR files are not recognised so closing down the project and reopening resolved the issue. This appears to be the path used on a different operating system.
-
-## !MESSAGE An internal error occurred during: "Refreshing workspace"
-
-If you get the above issue, try removing the downloaded Katalon instance being used for the tests, and replacing it with a freshly downloaded version ( making sure it is in the same location ). After doing this, your tests should be able to run successfully again.
-
-## Potential future improvements 
-
-### Cucumber testing
-11/10/18: The project has some initial tests for testing system pause functionality.
-
-To run the tests, go to Include > features, in side you will see the .feature files ( these are the cucumber files written in Gherkin ). Click the play button ( Firefox tends to error often when trying to login to the dashboard, so simply use Chrome ).
-
-To view the groovy files which contain the Cucumber Step Definitions ( which actually carry out the test ), go to scripts > groovy > iotaaDashboards
-
-Resources:
-I used this video for learning how to carry out BDD tests in Katalon (Katalon Studio 5.7 with Cucumber Behavior-Driven Development (BDD) support)[https://www.youtube.com/watch?v=vwCSfUhsivY]
-
-## Progess
-
-2/5/19
-
 ## Compiling gherkin doc
 
 Ideally we should only be documenting reusable code, ie, gherkin that can be written in future and works with existing glue code.
@@ -206,20 +71,18 @@ Ideally we should only be documenting reusable code, ie, gherkin that can be wri
 To compile dictionary files, go to the root of the katalon-testing directory and run 
 
 ```
-groovy /Users/jasoncarney/repository/visual-regression-testing/dictionary-doc/gherkin-doc.groovy "iotaaDashboardUtils" "glueCode"
+groovy ~/repository/visual-regression-testing/dictionary-doc/gherkin-doc.groovy "iotaaDashboardUtils" "glueCode"
 
 ```
 
-1/5/19:
-
 ## Approach
-After more work on the project, it appears that using lower level gherkin is better as you get more flexibility when writing features, ie, one gherkin step carries out one thing in the bound glue code function.
+It appears that using lower level gherkin is better as you get more flexibility when writing features, ie, one gherkin step carries out one thing in the bound glue code function.
 
 ## Reusable vs Hard coded glue code
 The approach to glue code creation should be something like 75% reusable code vs 25% hard coded. In essence, we should mainly aim to write reusable glue code for feature files, but where glue code is difficult to write, a hard coded version should be written so that the test in question can be progressed.
 
 ## Where should hard coded glue code reside
-Hard coded glue code shuold reside in Keyword files named after their respective feature files. An example that may make things clearer is below:
+Hard coded glue code should reside in Keyword files named after their respective feature files. An example that may make things clearer is below:
 
 ```
 localOfficeCreateNewOrder_regressionTest
@@ -310,25 +173,8 @@ Hard coded Glue Code functions should have an underscore prefix to denote that 
 def _i_enter_x_in_the_x_field_in_the_x_appflow(String inputValue, String inputField, String appflowScreen) { ... }
 ```
 
-## Unit testing (21/06/19)
-The following files were taken from https://github.com/kazurayam/junit4ks and added to visual-regression-testing. These files form part of strategy for using unit testing in the project.
 
-- visual-regression-testing/iotaa-project/Keywords/com.kazurayam.junit4ks/JUnitCustomKeywords.groovy
-- visual-regression-testing/iotaa-project/Keywords/com.kazurayam.junit4ks/JUnitCustomKeywords.groovy
-- visual-regression-testing/iotaa-project/Keywords/junittutorial/Greeter.groovy
-- visual-regression-testing/iotaa-project/Include/scripts/groovy/junittutorial/GreeterTest.groovy
-
-- 4/4/19: 
-
-    ### Architecture diagram
-    - https://www.lucidchart.com/documents/edit/8ac09420-3549-47c1-a70c-6841bd8c8848/0
-    
-    ### General guide
-    - Wide coverage: This tests lots of Scenarios in one feature. An example is the installation tool feature.
-        - Preferred over narrow coverage? Fewer Scenarios in one feature.
-        - 
-
-    ### Anatomy of feature file
+## Anatomy of feature file
     - Feature / test goal: Describes only one product feature, ie, Login, Use installation tool. Is a file that contains Gherkin.
 
     - Scenarios: Are containers which should summarise the Gherkin Steps within, ie, Create a client, Select a client
@@ -337,12 +183,6 @@ The following files were taken from https://github.com/kazurayam/junit4ks and ad
 
     - Glue Code: The code that is bound to a Step Definition. This will run code in a web browser.
 
-    ### Things to consider:
-    - Scalability: many test cases in one test suite, do we want to run loads of tests?
-    - What to test: a list of things we want to test.
-
-
-- 1/4/19: R and D server > ian.install: user currently not available
 
 
 
