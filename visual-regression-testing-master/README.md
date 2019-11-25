@@ -1,6 +1,6 @@
 ## Summary
 
-This project focuses on functional UI and visual regression testing of the Dashboards and App. Below is a brief explanation of the repository contents.
+This project focuses on behaviour driven development, functional UI and visual regression testing of the Dashboards and App. Below is a brief explanation of the repository contents.
 
 ## How to run the tests
 
