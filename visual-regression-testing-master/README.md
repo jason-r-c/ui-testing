@@ -175,13 +175,13 @@ def _i_enter_x_in_the_x_field_in_the_x_appflow(String inputValue, String inputFi
 
 
 ## Anatomy of feature file
-    - Feature / test goal: Describes only one product feature, ie, Login, Use installation tool. Is a file that contains Gherkin.
+- Feature / test goal: Describes only one product feature, ie, Login, Use installation tool. Is a file that contains Gherkin.
 
-    - Scenarios: Are containers which should summarise the Gherkin Steps within, ie, Create a client, Select a client
+- Scenarios: Are containers which should summarise the Gherkin Steps within, ie, Create a client, Select a client
 
-    - Step Definitions: Prefixed by a Gherkin keyword like 'Given, And, Then'. There after, it contains the content business rules.
+- Step Definitions: Prefixed by a Gherkin keyword like 'Given, And, Then'. There after, it contains the content business rules.
 
-    - Glue Code: The code that is bound to a Step Definition. This will run code in a web browser.
+- Glue Code: The code that is bound to a Step Definition. This will run code in a web browser.
 
 
 
